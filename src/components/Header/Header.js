@@ -1,17 +1,42 @@
-import { header } from '../../portfolio'
+// In Header.js component
+import { useContext } from 'react'
+import { ThemeContext } from '../../contexts/theme'
 import Navbar from '../Navbar/Navbar'
-import './Header.css'
+import { header } from '../../portfolio'
 
 const Header = () => {
+  const [{ themeName }] = useContext(ThemeContext)
   const { homepage, title } = header
 
+  const headerStyle = {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '4em',
+    background: 'var(--clr-bg)',
+    zIndex: 1000,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '0 2.5%',
+    boxShadow: 'var(--shadow)'
+  }
+
   return (
-    <header className='header center'>
+    <header style={headerStyle} className='header center'>
       <h3>
         {homepage ? (
-          <a href={homepage} className='link'>
-            {title}
-          </a>
+          <h3>
+            {homepage ? (
+              <a href={homepage} target="_blank" rel="noopener noreferrer" className="link" download>
+                {title}
+              </a>
+            ) : (
+              title
+            )}
+          </h3>
+
         ) : (
           title
         )}

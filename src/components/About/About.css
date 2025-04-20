@@ -23,10 +23,18 @@
 
 .about .link--icon {
   margin-right: 0.8em;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-
+.about .link--icon:hover {
+  color: var(--clr-primary);
+  transform: scale(1.1);
+}
 .about .btn--outline {
   margin-right: 1em;
+  transition: transform 0.3s ease-in-out;
+}
+.about .btn--outline:hover {
+  transform: translateY(-3px);
 }
 
 @media (max-width: 600px) {

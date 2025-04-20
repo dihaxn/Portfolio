@@ -1,0 +1,32 @@
+.references__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.reference__card {
+    background: var(--clr-bg-alt);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.reference__card:hover {
+    transform: translateY(-5px);
+}
+
+.reference__role {
+    color: var(--clr-primary);
+    margin: 0.5rem 0;
+}
+
+.reference__company {
+    color: var(--clr-fg-alt);
+    font-size: 0.9rem;
+}
+
+.reference__contact {
+    margin-top: 1rem;
+    font-weight: bold;
+}

@@ -1,71 +1,103 @@
-const header = {
-  // all the properties are optional - can be left empty or deleted
-  homepage: 'https://rjshkhr.github.io/cleanfolio',
-  title: 'JS.',
+export const header = {
+  homepage: '/',
+  title: 'DL',
 }
 
-const about = {
-  // all the properties are optional - can be left empty or deleted
-  name: 'John Smith',
-  role: 'Front End Engineer',
-  description:
-    'Adipisicing sit fugit ullam unde aliquid sequi Facilis soluta facilis perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi quisquam? Illo ut quasi nemo ipsa cumque perspiciatis! Maiores minima consectetur.',
-  resume: 'https://example.com',
+export const about = {
+  name: 'Dihan Laknuka',
+  role: 'Full Stack Developer',
+  description: 'Undergraduate in Computer Science at University of Ruhuna seeking internship opportunities to gain experience in software development and IT.',
+  resume: 'https://drive.google.com/file/d/116sJERtpI6WiZCa-05nS9oQLEfNXNLpO/view?usp=drive_link',
   social: {
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
+    github: 'https://github.com/yourusername',
+    linkedin: 'https://linkedin.com/in/yourprofile',
   },
 }
 
-const projects = [
-  // projects can be added an removed
-  // if there are no projects, Projects section won't show up
+export const education = [
   {
-    name: 'Project 1',
-    description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    degree: 'Bachelor of Computer Science',
+    university: 'University of Ruhuna',
+    period: 'Nov 2021 - Present'
   },
   {
-    name: 'Project 2',
-    description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    qualification: 'GCE Advanced Level',
+    school: 'Asoka College, Colombo 10',
+    stream: 'Mathematics Stream',
+    year: 2020
+  }
+]
+
+export const certifications = [
+  {
+    name: 'Mastering CI/CD Pipelines',
+    link: 'https://drive.google.com/file/d/FILE_ID/view?usp=sharing',
   },
   {
-    name: 'Project 3',
-    description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    name: 'Designing AWS Solutions',
+    link: 'https://drive.google.com/file/d/FILE_ID/view?usp=sharing',
+  },
+  {
+    name: 'Diploma in Computer Science',
+    link: 'https://drive.google.com/file/d/FILE_ID/view?usp=sharing',
   },
 ]
 
-const skills = [
-  // skills can be added or removed
-  // if there are no skills, Skills section won't show up
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'Redux',
-  'SASS',
-  'Material UI',
-  'Git',
-  'CI/CD',
-  'Jest',
-  'Enzyme',
+export const awards = [
+  {
+    name: '3rd Place - Play Expo 2024',
+    link: 'https://drive.google.com/file/d/FILE_ID_1/view?usp=sharing',
+  },
+  {
+    name: 'Participant - Insurgex 1.0 Hackathon',
+    link: 'https://drive.google.com/file/d/FILE_ID_2/view?usp=sharing',
+  },
+  {
+    name: 'Participant - Nebula Inter-University Esport Showdown 2024',
+    link: 'https://drive.google.com/file/d/FILE_ID_3/view?usp=sharing',
+  },
 ]
 
-const contact = {
-  // email is optional - if left empty Contact section won't show up
-  email: 'johnsmith@mail.com',
+export const projects = [
+  {
+    name: 'Little Lanka Outlets Management System',
+    description: 'Comprehensive POS and management system for retail outlets',
+    stack: ['React', 'Spring Boot', 'AWS', 'Docker', 'Jenkins'],
+    sourceCode: 'https://github.com/yourusername/little-lanka',
+  },
+  {
+    name: 'Learning Management System',
+    description: 'Platform for educational content delivery',
+    stack: ['React', 'Spring Boot', 'Tailwind CSS'],
+    livePreview: 'https://lms-demo.com',
+  },
+  {
+    name: 'Hunting Resource Management',
+    description: 'Permit and equipment tracking system',
+    stack: ['JavaFX', 'MySQL', 'Git'],
+  },
+]
+
+export const skills = [
+  'React', 'Spring Boot', 'AWS', 'Docker', 'Jenkins',
+  'Project Management', 'Team Leadership', 'Problem Solving', 'Agile Methodologies'
+]
+
+export const references = [
+  {
+    name: 'Surani Mekala',
+    role: 'Senior Software QA Engineer',
+    company: 'Azend Technologies',
+    contact: '+94 714368271'
+  },
+  {
+    name: 'Tharanga Randunuveera',
+    role: 'Associate Lead DevOps',
+    company: 'SwivelTech',
+    contact: '+94 771782112'
+  }
+]
+
+export const contact = {
+  email: 'ihanlaknuka@gmail.com',
 }
-
-export { header, about, projects, skills, contact }
