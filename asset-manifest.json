@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cleanfolio/static/css/main.2f1dc1de.css",
+    "main.js": "/cleanfolio/static/js/main.ac5bdcae.js",
+    "index.html": "/cleanfolio/index.html",
+    "main.2f1dc1de.css.map": "/cleanfolio/static/css/main.2f1dc1de.css.map",
+    "main.ac5bdcae.js.map": "/cleanfolio/static/js/main.ac5bdcae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f1dc1de.css",
+    "static/js/main.ac5bdcae.js"
+  ]
+}
