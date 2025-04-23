@@ -6,11 +6,13 @@ export const header = {
 export const about = {
   name: 'Dihan Laknuka',
   role: 'Full Stack Developer',
-  description: 'Undergraduate in Computer Science at University of Ruhuna seeking internship opportunities to gain experience in software development and IT.',
+  description: 'As an undergraduate in computer science at the University of Ruhuna, I\'m looking for\n' +
+    'an internship opportunity to gain experience in the field of IT and shape my\n' +
+    'knowledge to continue my career as a software developer.',
   resume: 'https://drive.google.com/file/d/116sJERtpI6WiZCa-05nS9oQLEfNXNLpO/view?usp=drive_link',
   social: {
-    github: 'https://github.com/yourusername',
-    linkedin: 'https://linkedin.com/in/yourprofile',
+    github: 'https://github.com/dihaxn',
+    linkedin: 'https://www.linkedin.com/in/dihan-laknuka-125374269/',
   },
 }
 
@@ -31,7 +33,7 @@ export const education = [
 export const certifications = [
   {
     name: 'Mastering CI/CD Pipelines',
-    link: 'https://drive.google.com/file/d/FILE_ID/view?usp=sharing',
+    link: 'https://drive.google.com/file/d/1uj4p160ck1N313g0RE46oRG6ePhWKkc3/view?usp=drive_link',
   },
   {
     name: 'Designing AWS Solutions',
@@ -61,22 +63,34 @@ export const awards = [
 export const projects = [
   {
     name: 'Little Lanka Outlets Management System',
-    description: 'Comprehensive POS and management system for retail outlets',
-    stack: ['React', 'Spring Boot', 'AWS', 'Docker', 'Jenkins'],
-    sourceCode: 'https://github.com/yourusername/little-lanka',
+    description:
+      'An Outlet Management and Point of Sale (POS) system that streamlined business operations and enhanced customer service.',
+    stack: ['React', 'Spring Boot', 'Node.js', 'Tailwind CSS', 'Docker', 'AWS', 'Jenkins', 'CI/CD', 'MySQL', 'Git'],
+    sourceCode: 'https://github.com/rashmithakau/lloms-frontend',
+    additionalLinks: [
+      { label: 'BFF Service', url: 'https://github.com/rashmithakau/lloms-bff-test' },
+      { label: 'Outlet Service', url: 'https://github.com/rashmithakau/outlet-service' },
+      { label: 'User Service', url: 'https://github.com/rashmithakau/user-service' },
+      { label: 'Reporting Service', url: 'https://github.com/rashmithakau/reporting-service' },
+      { label: 'Product Service', url: 'https://github.com/rashmithakau/product-service' },
+    ],
+  },
+  {
+    name: 'Hunting Resource Management System',
+    description:
+      'A resource management application for tracking hunting permits and equipment to improve operational efficiency.',
+    stack: ['Java', 'JavaFX', 'MySQL', 'Git'],
+    sourceCode: 'https://github.com/dihaxn/HRMS',
   },
   {
     name: 'Learning Management System',
-    description: 'Platform for educational content delivery',
-    stack: ['React', 'Spring Boot', 'Tailwind CSS'],
+    description: 'An LMS platform for managing educational content delivery with robust CI/CD pipelines.',
+    stack: ['React', 'Spring Boot', 'Tailwind CSS', 'Docker', 'AWS', 'Jenkins', 'CI/CD', 'MySQL', 'Nginx', 'Cloudflare', 'Git', 'SonarQube'],
+    sourceCode: 'https://github.com/dihaxn/LMS-Project',
     livePreview: 'https://lms-demo.com',
   },
-  {
-    name: 'Hunting Resource Management',
-    description: 'Permit and equipment tracking system',
-    stack: ['JavaFX', 'MySQL', 'Git'],
-  },
 ]
+
 
 export const skills = [
   'React', 'Spring Boot', 'AWS', 'Docker', 'Jenkins',
