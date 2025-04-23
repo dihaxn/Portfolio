@@ -1,11 +1,7 @@
-import { useContext } from 'react'
-import { ThemeContext } from '../../contexts/theme'
 import Navbar from '../Navbar/Navbar'
 import { header } from '../../portfolio'
 
 const Header = () => {
-  // Remove the destructured themeName as it's unused
-  const [{}] = useContext(ThemeContext)
   const { homepage, title } = header
 
   const headerStyle = {
