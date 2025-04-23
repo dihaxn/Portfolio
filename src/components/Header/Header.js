@@ -5,7 +5,7 @@ import Navbar from '../Navbar/Navbar'
 import { header } from '../../portfolio'
 
 const Header = () => {
-  const [{ themeName }] = useContext(ThemeContext)
+  const [{ toggleTheme }] = useContext(ThemeContext) // Removed unused themeName
   const { homepage, title } = header
 
   const headerStyle = {
@@ -27,16 +27,9 @@ const Header = () => {
     <header style={headerStyle} className='header center'>
       <h3>
         {homepage ? (
-          <h3>
-            {homepage ? (
-              <a href={homepage} target="_blank" rel="noopener noreferrer" className="link" download>
-                {title}
-              </a>
-            ) : (
-              title
-            )}
-          </h3>
-
+          <a href={homepage} target="_blank" rel="noopener noreferrer" className="link" download>
+            {title}
+          </a>
         ) : (
           title
         )}
