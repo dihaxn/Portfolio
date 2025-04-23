@@ -1,11 +1,11 @@
-// In Header.js component
+// components/Header/Header.js
 import { useContext } from 'react'
 import { ThemeContext } from '../../contexts/theme'
 import Navbar from '../Navbar/Navbar'
 import { header } from '../../portfolio'
 
 const Header = () => {
-  const [{ toggleTheme }] = useContext(ThemeContext) // Removed unused themeName
+  const { themeName } = useContext(ThemeContext)
   const { homepage, title } = header
 
   const headerStyle = {
@@ -24,7 +24,7 @@ const Header = () => {
   }
 
   return (
-    <header style={headerStyle} className='header center'>
+    <header style={headerStyle} className={`header center ${themeName}`}>
       <h3>
         {homepage ? (
           <a href={homepage} target="_blank" rel="noopener noreferrer" className="link" download>
