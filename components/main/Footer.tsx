@@ -58,8 +58,8 @@ const Footer = () => {
                             DIHAN LAKNUKA
                         </h3>
                         <p className="text-sm text-white/90 leading-relaxed">
-                            Internship - Software Engineer<br />
-                            University of Ruhuna
+
+                            University of Ruhuna (BCS Undergraduate)
                         </p>
                         <p className="text-sm italic text-white/70">
                             Shaping knowledge to build career
