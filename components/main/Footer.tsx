@@ -22,7 +22,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="w-full bg-gradient-to-b from-purple-900/20 to-indigo-900/30 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <footer  id="contact" className="w-full bg-gradient-to-b from-purple-900/20 to-indigo-900/30 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             {/* Embedded CSS Animations */}
             <style dangerouslySetInnerHTML={{
                 __html: `
