@@ -1,6 +1,5 @@
 import React from "react";
 import {
-    RxDiscordLogo,
     RxGithubLogo,
     RxInstagramLogo,
     RxTwitterLogo,
@@ -9,45 +8,50 @@ import {
     RxMobile,
     RxGlobe
 } from "react-icons/rx";
-import { FaYoutube } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
 
 const Footer = () => {
     const socialLinks = {
-        tiktok: "https://www.tiktok.com/@dihaxn?_r=1&_d=eg8hdidh0li4l7&sec_uid=MS4wLjABAAAAcIzkuqfRWmt-8AexAfel7occZq8aXnFSxSqiKO2KzEOl_rYP6ZUfeHD9CqxsKIL5&share_author_id=7144222661756175365&sharer_language=en&source=h5_m&u_code=e4017dd04mlik2&timestamp=1746235713&user_id=7144222661756175365&sec_user_id=MS4wLjABAAAAcIzkuqfRWmt-8AexAfel7occZq8aXnFSxSqiKO2KzEOl_rYP6ZUfeHD9CqxsKIL5&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7495251446893577991&share_link_id=9e342b92-d631-4903-b362-e4332dc56b61&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1",
+        tiktok: "https://www.tiktok.com/@dihaxn",
         github: "https://github.com/dihaxn",
-        discord: "https://discord.gg/dihaxn",
+        telegram: "https://t.me/dihaxn",
         instagram: "https://www.instagram.com/dihax.n?igsh=YmZiNTZ6NTdsYWc5",
         twitter: "https://x.com/dihaxn",
-        linkedin: "https://linkedin.com/in/dihan-laknuka125374269"
+        linkedin: "https://www.linkedin.com/in/dihan-laknuka125374269"
     };
 
     return (
-        <footer id="contact" className="w-full bg-gradient-to-b from-purple-900/20 to-indigo-900/30 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-            {/* Embedded CSS Animations (unchanged) */}
-            <style dangerouslySetInnerHTML={{
-                __html: `
-                    @keyframes border-width {
-                        0% { background-size: 0% 100%; }
-                        50% { background-size: 100% 100%; }
-                        100% { background-size: 0% 100%; }
-                    }
-                    @keyframes line-expand {
-                        0% { transform: scaleX(0); opacity: 0; }
-                        100% { transform: scaleX(1); opacity: 1; }
-                    }
-                    .animate-border-width {
-                        background: linear-gradient(90deg, transparent, #a855f7, transparent);
-                        background-size: 0% 100%;
-                        animation: border-width 3s linear infinite;
-                    }
-                    .animate-line-expand {
-                        animation: line-expand 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-                    }
-                `
-            }} />
+        <footer
+            id="contact"
+            className="w-full bg-gradient-to-b from-purple-900/20 to-indigo-900/30 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+        >
+            {/* Embedded CSS Animations */}
+            <style
+                dangerouslySetInnerHTML={{
+                    __html: `
+            @keyframes border-width {
+              0% { background-size: 0% 100%; }
+              50% { background-size: 100% 100%; }
+              100% { background-size: 0% 100%; }
+            }
+            @keyframes line-expand {
+              0% { transform: scaleX(0); opacity: 0; }
+              100% { transform: scaleX(1); opacity: 1; }
+            }
+            .animate-border-width {
+              background: linear-gradient(90deg, transparent, #a855f7, transparent);
+              background-size: 0% 100%;
+              animation: border-width 3s linear infinite;
+            }
+            .animate-line-expand {
+              animation: line-expand 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            }
+          `
+                }}
+            />
 
-            {/* Animated top border (unchanged) */}
+            {/* Animated top border */}
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-border-width" />
 
             <div className="max-w-6xl mx-auto">
@@ -77,7 +81,7 @@ const Footer = () => {
                             {[
                                 { icon: FaTiktok, color: "text-pink-500", href: socialLinks.tiktok, text: "TikTok" },
                                 { icon: RxGithubLogo, color: "text-gray-300", href: socialLinks.github, text: "GitHub" },
-                                { icon: RxDiscordLogo, color: "text-blue-400", href: socialLinks.discord, text: "Discord" },
+                                { icon: FaTelegramPlane, color: "text-blue-300", href: socialLinks.telegram, text: "Telegram" },
                             ].map((item, index) => (
                                 <li key={index} className="group relative">
                                     <a
@@ -88,7 +92,7 @@ const Footer = () => {
                                     >
                                         <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110`} />
                                         <span className="text-xs sm:text-sm md:text-base text-white/90">{item.text}</span>
-                                        <span className="absolute inset-0 z-10" aria-hidden="true" />
+                                        <span className="absolute inset-0 z-10 pointer-events-none" aria-hidden="true" />
                                     </a>
                                 </li>
                             ))}
@@ -116,7 +120,7 @@ const Footer = () => {
                                     >
                                         <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110`} />
                                         <span className="text-xs sm:text-sm md:text-base text-white/90">{item.text}</span>
-                                        <span className="absolute inset-0 z-10" aria-hidden="true" />
+                                        <span className="absolute inset-0 z-10 pointer-events-none" aria-hidden="true" />
                                     </a>
                                 </li>
                             ))}
@@ -140,7 +144,7 @@ const Footer = () => {
                                 {
                                     icon: RxMobile,
                                     color: "text-green-400",
-                                    href: "tel:+94701410595",
+                                    isLink: false,
                                     text: "+94 701410595"
                                 },
                                 {
@@ -158,7 +162,7 @@ const Footer = () => {
                                         >
                                             <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110`} />
                                             <span className="text-xs sm:text-sm md:text-base text-white/90 break-all">{item.text}</span>
-                                            <span className="absolute inset-0 z-10" aria-hidden="true" />
+                                            <span className="absolute inset-0 z-10 pointer-events-none" aria-hidden="true" />
                                         </a>
                                     ) : (
                                         <div className="flex items-center p-1 sm:p-2 group">
@@ -178,12 +182,13 @@ const Footer = () => {
                         © {new Date().getFullYear()} Moon. All rights reserved.
                         <br />
                         <span className="text-[0.7rem] sm:text-xs mt-1 block text-white/60">
-                            Follow me for more! ❤️</span>
+              Follow me for more! ❤️
+            </span>
                     </p>
                 </div>
             </div>
 
-            {/* Background glow effects (unchanged) */}
+            {/* Background glow effects */}
             <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-purple-500/20 rounded-full blur-[80px] -z-10" />
             <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-[80px] -z-10" />
         </footer>
