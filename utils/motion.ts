@@ -37,3 +37,6 @@ export function slideInFromLeft(delay: number) {
       },
     },
   };
+
+
+

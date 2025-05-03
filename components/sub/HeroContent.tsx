@@ -25,15 +25,16 @@ const HeroContent = () => {
           >
             <SparklesIcon className="text-[#b49bff] mr-2 md:mr-[10px] h-4 w-4 md:h-5 md:w-5" />
             <h1 className="Welcome-text text-xs md:text-[13px]">
-              Fullstack Developer
-              <span className="hidden md:inline"> | DevOps Geek | Socrates Web3 🇱🇰 Ambassador</span>
+              Fullstack Developer | DevOps Geek
+              <span className="hidden md:inline">  | Socrates Web3 🇱🇰 Ambassador</span>
             </h1>
           </motion.div>
 
-          {/* ... rest of the component remains unchanged ... */}
           <motion.div
               variants={slideInFromLeft(0.5)}
-              className="flex flex-col gap-4 md:gap-6 mt-4 md:mt-6 text-4xl md:text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+              className="flex flex-col gap-4 md:gap-6 mt-4 md:mt-6 text-4xl md:text-6xl font-bold text-white max-w-[600px] w-auto h-auto
+              [text-shadow:_0_0_5px_#00f7ff] md:[text-shadow:none]
+              [-webkit-text-stroke:0.1px_#00f7ff] md:[-webkit-text-stroke:0]"
           >
           <span>
             Providing
@@ -47,7 +48,9 @@ const HeroContent = () => {
 
           <motion.p
               variants={slideInFromLeft(0.8)}
-              className="text-base md:text-lg text-gray-400 my-3 md:my-5 max-w-[600px]"
+              className="text-base md:text-lg text-cyan-300 my-3 md:my-5 max-w-[600px]
+    [text-shadow:_0_0_3px_#00f7ff] md:[text-shadow:none]
+    [-webkit-text-stroke:0.1px_#00f7ff] md:[-webkit-text-stroke:0]"
           >
             I&apos;m a Full Stack Software Developer with experience in Website
             and Software development. Check out my projects and skills.
