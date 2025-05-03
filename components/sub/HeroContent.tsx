@@ -25,10 +25,12 @@ const HeroContent = () => {
           >
             <SparklesIcon className="text-[#b49bff] mr-2 md:mr-[10px] h-4 w-4 md:h-5 md:w-5" />
             <h1 className="Welcome-text text-xs md:text-[13px]">
-              Fullstack Developer | DevOps Geek | Socrates Web3 🇱🇰 Ambassador
+              Fullstack Developer
+              <span className="hidden md:inline"> | DevOps Geek | Socrates Web3 🇱🇰 Ambassador</span>
             </h1>
           </motion.div>
 
+          {/* ... rest of the component remains unchanged ... */}
           <motion.div
               variants={slideInFromLeft(0.5)}
               className="flex flex-col gap-4 md:gap-6 mt-4 md:mt-6 text-4xl md:text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
