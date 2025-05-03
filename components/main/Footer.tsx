@@ -16,7 +16,7 @@ const Footer = () => {
     const socialLinks = {
         tiktok: "https://www.tiktok.com/@dihaxn?_r=1&_d=eg8hdidh0li4l7&sec_uid=MS4wLjABAAAAcIzkuqfRWmt-8AexAfel7occZq8aXnFSxSqiKO2KzEOl_rYP6ZUfeHD9CqxsKIL5&share_author_id=7144222661756175365&sharer_language=en&source=h5_m&u_code=e4017dd04mlik2&timestamp=1746235713&user_id=7144222661756175365&sec_user_id=MS4wLjABAAAAcIzkuqfRWmt-8AexAfel7occZq8aXnFSxSqiKO2KzEOl_rYP6ZUfeHD9CqxsKIL5&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7495251446893577991&share_link_id=9e342b92-d631-4903-b362-e4332dc56b61&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1",
         github: "https://github.com/dihaxn",
-        discord: "https://discord.gg/diha.xn#6676",
+        discord: "https://discord.gg/dihaxn",
         instagram: "https://www.instagram.com/dihax.n?igsh=YmZiNTZ6NTdsYWc5",
         twitter: "https://x.com/dihaxn",
         linkedin: "https://linkedin.com/in/dihan-laknuka125374269"
