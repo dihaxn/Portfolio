@@ -16,6 +16,7 @@ const SkillText = () => {
                     Building the future with cutting-edge tech
                 </h1>
             </motion.div>
+            <br/>
             <motion.h1
                 variants={slideInFromLeft(0.5)}
                 className='text-4xl md:text-5xl lg:text-6xl font-extrabold mt-2 md:mt-[10px] text-center mb-3 md:mb-[15px] tech-arsenal-gradient tech-arsenal-heading'
