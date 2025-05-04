@@ -1,12 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 .cursive {
   font-family: "Cedarville Cursive", cursive;
 }
+
+.tech-arsenal-gradient {
+  background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.tech-arsenal-heading {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 .Welcome-text {
   background: linear-gradient(
           0deg,
@@ -19,6 +33,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .Welcome-box {
   isolation: isolate;
   overflow: hidden;
@@ -28,7 +43,6 @@
   border-radius: 32px;
   box-shadow: inset 0 -7px 11px #a48fff1f;
   display: flex;
-
   position: relative;
   width: -moz-max-content;
   width: max-content;
@@ -54,20 +68,14 @@
   box-shadow: inset 0 0 12px #bf97ff70;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hidden {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
 
-
-
 html {
   scroll-behavior: smooth;
 }
-
-
-

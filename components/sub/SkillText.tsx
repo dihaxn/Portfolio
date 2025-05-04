@@ -16,11 +16,12 @@ const SkillText = () => {
                     Building the future with cutting-edge tech
                 </h1>
             </motion.div>
-            <motion.div
+            <motion.h1
                 variants={slideInFromLeft(0.5)}
-                className='text-2xl md:text-3xl lg:text-[30px] text-white font-medium mt-2 md:mt-[10px] text-center mb-3 md:mb-[15px]'
+                className='text-4xl md:text-5xl lg:text-6xl font-extrabold mt-2 md:mt-[10px] text-center mb-3 md:mb-[15px] tech-arsenal-gradient tech-arsenal-heading'
             >
-                ⚡ Tech Arsenal            </motion.div>
+                ⚡ Tech Arsenal
+            </motion.h1>
             <motion.div
                 variants={slideInFromRight(0.5)}
                 className='cursive text-base md:text-lg lg:text-[20px] text-gray-200 mb-6 md:mb-10 mt-2 md:mt-[10px] text-center'
