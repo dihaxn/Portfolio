@@ -55,7 +55,7 @@ const HeroContent = () => {
             and Software development. Check out my projects and skills.
           </motion.p>
           <motion.a
-              href="https://drive.google.com/file/d/116sJERtpI6WiZCa-05nS9oQLEfNXNLpO/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1DqOb72c6E3QywPYqs3ZeeTBC3uLmnp8h/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               variants={slideInFromLeft(1)}
