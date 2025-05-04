@@ -1,3 +1,4 @@
+// 4. SkillText Component
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
@@ -19,7 +20,7 @@ const SkillText = () => {
             <br/>
             <motion.h1
                 variants={slideInFromLeft(0.5)}
-                className='text-4xl md:text-5xl lg:text-6xl font-extrabold mt-2 md:mt-[10px] text-center mb-3 md:mb-[15px] tech-arsenal-gradient tech-arsenal-heading neon-skill-glow'
+                className="text-3xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-600 to-pink-500 neon-skill-glow"
             >
                 ⚡ Tech Arsenal
             </motion.h1>

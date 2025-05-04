@@ -1,3 +1,4 @@
+// 1. Encryption Component
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
@@ -10,13 +11,9 @@ const Encryption = () => {
             <div className="w-auto h-auto top-0 z-[5] md:absolute">
                 <motion.div
                     variants={slideInFromTop}
-                    className="text-[30px] md:text-[40px] font-medium text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-300 neon-encryption-glow px-4"
+                    className="text-3xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-600 to-pink-500 neon-encryption-glow"
                 >
-                    Performance
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-                        {" "}&{" "}
-                    </span>
-                    Security
+                    Performance & Certificates
                 </motion.div>
             </div>
 
