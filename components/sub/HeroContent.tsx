@@ -1,4 +1,3 @@
-// HeroContent component
 "use client";
 
 import React from "react";
@@ -60,9 +59,14 @@ const HeroContent = () => {
               target="_blank"
               rel="noopener noreferrer"
               variants={slideInFromLeft(1)}
-              className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] mx-auto md:mx-0"
+              className="py-2 md:py-2.5 px-4 md:px-5 button-primary text-center text-white cursor-pointer rounded-full
+              md:rounded-lg glow-button transform transition-all duration-300 hover:scale-105
+              text-sm md:text-sm relative overflow-hidden w-fit mx-auto md:mx-0"
           >
-            Download CV 😎
+            <span className="relative z-10">
+              Download CV <span className="inline-block animate-bounce">😎</span>
+            </span>
+            <div className="md:hidden absolute -inset-2 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
           </motion.a>
         </div>
 
