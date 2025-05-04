@@ -37,49 +37,49 @@ const HeroContent = () => {
             flex flex-col
             gap-3 md:gap-6
             mt-4 md:mt-6
-            /* MOBILE backdrop */
-            bg-black bg-opacity-50 p-2 rounded
-            md:bg-transparent md:p-0
-            /* MOBILE text */
-            text-2xl text-white drop-shadow-lg
-            /* DESKTOP: gradient text */
-            md:text-6xl
-            md:bg-clip-text md:text-transparent
-            md:bg-gradient-to-r md:from-indigo-400 md:via-purple-500 md:to-pink-500
-            md:[text-shadow:none]
+            text-2xl md:text-6xl
             max-w-[600px] w-auto h-auto
           "
           >
-          <span>
-            Providing
-            <span className="hidden md:inline bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-teal-300">
-              {" "}
-              the best{" "}
+            <div className="md:hidden relative">
+              <div className="absolute -inset-4 bg-black/90 blur-2xl rounded-3xl" />
+              <span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 px-4 py-2">
+              Providing project experience
             </span>
-            project experience
-          </span>
+            </div>
+            <div className="hidden md:block bg-clip-text text-transparent
+            bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500
+            [text-shadow:none]">
+              Providing
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-teal-300">
+              {" "}the best{" "}
+            </span>
+              project experience
+            </div>
           </motion.div>
 
           {/* Subtitle */}
           <motion.p
               variants={slideInFromLeft(0.8)}
               className="
-            /* MOBILE backdrop */
-            bg-black bg-opacity-50 p-2 rounded
-            md:bg-transparent md:p-0
-            /* MOBILE text */
-            text-sm text-gray-100 drop-shadow-sm
-            /* DESKTOP: gradient text */
-            md:text-lg
-            md:bg-clip-text md:text-transparent
-            md:bg-gradient-to-r md:from-gray-400 md:to-gray-600
-            md:[text-shadow:none]
             my-2 md:my-5
             max-w-[600px]
           "
           >
-            I&apos;m a Full Stack Software Developer with experience in Website
-            and Software development. Check out my projects and skills.
+            <div className="md:hidden relative">
+              <div className="absolute -inset-4 bg-black/90 blur-2xl rounded-3xl" />
+              <span className="relative z-10 text-sm text-white px-4 py-2">
+              I'm a Full Stack Software Developer with experience in Website
+              and Software development. Check out my projects and skills.
+              </span>
+            </div>
+            <div className="hidden md:block text-lg
+            bg-clip-text text-transparent
+            bg-gradient-to-r from-gray-400 to-gray-600
+            [text-shadow:none]">
+              I&apos;m a Full Stack Software Developer with experience in Website
+              and Software development. Check out my projects and skills.
+            </div>
           </motion.p>
 
           {/* CTA */}
