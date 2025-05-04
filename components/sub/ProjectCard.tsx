@@ -9,17 +9,31 @@ interface Props {
 }
 
 const ProjectCard = ({ src, title, description, technologies }: Props) => {
+    const isVideo = src.endsWith(".mp4");
+
     return (
         <div className="rounded-xl p-[2px] bg-gradient-to-r from-purple-500 to-cyan-500 hover:shadow-[0_0_20px_4px_rgba(139,92,246,0.4)] transition-shadow duration-300">
             <div className="relative overflow-hidden rounded-xl group bg-[#0a061d] h-full">
                 <div className="relative h-40 md:h-52 overflow-hidden">
-                    <Image
-                        src={src}
-                        alt={title}
-                        width={800}
-                        height={600}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
+                    {isVideo ? (
+                        <video
+                            autoPlay
+                            muted
+                            loop
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        >
+                            <source src={src} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    ) : (
+                        <Image
+                            src={src}
+                            alt={title}
+                            width={800}
+                            height={600}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a061d] via-[#0a061d]/70 to-transparent" />
                 </div>
 

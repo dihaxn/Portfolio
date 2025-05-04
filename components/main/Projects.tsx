@@ -24,10 +24,10 @@ const Projects = () => {
                         technologies={["React TS", "Node.js", "MySQL", "Redis"]}
                     />
                     <ProjectCard
-                        src="/CardImage.png"
-                        title="Wildlife Management System"
-                        description="Digital solution for wildlife departments with geofencing."
-                        technologies={["Java", "JavaFX", "MySQL", "Git"]}
+                        src="/hrms.mp4"
+                        title="Hunting Resource Management System"
+                        description="Digital solution for wildlife departments with geofencing and tracking features 🦁🌿"
+                        technologies={["Java", "JavaFX", "MySQL", "OOP Principles", "Git"]}
                     />
                     <ProjectCard
                         src="/SpaceWebsite.png"
