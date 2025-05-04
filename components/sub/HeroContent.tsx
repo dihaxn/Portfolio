@@ -69,7 +69,7 @@ const HeroContent = () => {
             <div className="md:hidden relative">
               <div className="absolute -inset-4 bg-black/90 blur-2xl rounded-3xl" />
               <span className="relative z-10 text-sm text-white px-4 py-2">
-              I'm a Full Stack Software Developer with experience in Website
+              I&apos;m a Full Stack Software Developer with experience in Website
               and Software development. Check out my projects and skills.
               </span>
             </div>
