@@ -57,52 +57,82 @@ const Encryption = () => {
     ];
 
     return (
-        <div className="flex flex-col md:flex-row relative items-center justify-center min-h-screen w-full h-full px-4 overflow-hidden">
+        <div className="flex flex-col relative items-center justify-center min-h-screen w-full h-full px-4 overflow-hidden">
             {/* Title Section */}
-            <div className="w-auto h-auto top-0 z-[5] md:absolute">
+            <div id="achievements" className="w-auto h-auto z-[5] md:absolute md:top-0 mt-8 md:mt-0 mb-4 md:mb-0">
                 <motion.div
                     variants={slideInFromTop}
-                    className="text-3xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-600 to-pink-500 neon-encryption-glow"
+                    className="text-2xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-600 to-pink-500 neon-encryption-glow"
                 >
-                    Skills & Achievements
-                    <br/>
-                    <br/>
-                    <div className="cursive text-[16px] md:text-[20px] font-medium text-center text-gray-300 px-4">
+                    🔐 Skills & Achievements
+                    <div className="cursive text-[14px] md:text-[20px] font-medium text-center text-gray-300 px-4 mt-2">
                         Click the lock to reveal details
                     </div>
                 </motion.div>
             </div>
 
             {/* Central Container */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[20] w-auto h-auto flex items-center">
-                {/* Left Panel */}
-                {isMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="absolute right-[120px] w-[280px] md:w-[350px] bg-gray-800 rounded-lg shadow-xl z-50 p-4"
-                    >
-                        <div className="space-y-6">
-                            {leftSections.map((section, index) => (
-                                <div key={index}>
-                                    <h3 className="text-cyan-400 font-semibold mb-3 text-sm md:text-base border-b border-cyan-500/30 pb-2">
-                                        {section.title}
-                                    </h3>
-                                    <ul className="list-disc list-inside space-y-2">
-                                        {section.items.map((item, idx) => (
-                                            <li
-                                                key={idx}
-                                                className="text-gray-300 text-xs md:text-sm leading-relaxed"
-                                            >
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
-                    </motion.div>
-                )}
+            <div className="flex flex-col items-center z-[20] w-full md:w-auto h-auto mt-12 md:mt-0 md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
+                {/* Panels Container */}
+                <div className={`w-full flex flex-col md:flex-row gap-4 ${isMenuOpen ? 'mb-8' : ''}`}>
+                    {/* Left Panel */}
+                    {isMenuOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="w-full md:w-[280px] bg-gray-800 rounded-lg shadow-xl z-50 p-4"
+                        >
+                            <div className="space-y-6">
+                                {leftSections.map((section, index) => (
+                                    <div key={index}>
+                                        <h3 className="text-cyan-400 font-semibold mb-3 text-sm md:text-base border-b border-cyan-500/30 pb-2">
+                                            {section.title}
+                                        </h3>
+                                        <ul className="list-disc list-inside space-y-2">
+                                            {section.items.map((item, idx) => (
+                                                <li
+                                                    key={idx}
+                                                    className="text-gray-300 text-xs md:text-sm leading-relaxed"
+                                                >
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    )}
+
+                    {/* Right Panel */}
+                    {isMenuOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="w-full md:w-[280px] bg-gray-800 rounded-lg shadow-xl z-50 p-4"
+                        >
+                            <div className="space-y-6">
+                                {rightSections.map((section, index) => (
+                                    <div key={index}>
+                                        <h3 className="text-purple-400 font-semibold mb-3 text-sm md:text-base border-b border-purple-500/30 pb-2">
+                                            {section.title}
+                                        </h3>
+                                        <ul className="list-disc list-inside space-y-2">
+                                            {section.items.map((item, idx) => (
+                                                <li
+                                                    key={idx}
+                                                    className="text-gray-300 text-xs md:text-sm leading-relaxed"
+                                                >
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    )}
+                </div>
 
                 {/* Lock Section */}
                 <div className="relative z-30">
@@ -131,35 +161,6 @@ const Encryption = () => {
                         <h1 className="Welcome-text text-[12px]">Explore Profile</h1>
                     </div>
                 </div>
-
-                {/* Right Panel */}
-                {isMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="absolute left-[120px] w-[280px] md:w-[350px] bg-gray-800 rounded-lg shadow-xl z-50 p-4"
-                    >
-                        <div className="space-y-6">
-                            {rightSections.map((section, index) => (
-                                <div key={index}>
-                                    <h3 className="text-purple-400 font-semibold mb-3 text-sm md:text-base border-b border-purple-500/30 pb-2">
-                                        {section.title}
-                                    </h3>
-                                    <ul className="list-disc list-inside space-y-2">
-                                        {section.items.map((item, idx) => (
-                                            <li
-                                                key={idx}
-                                                className="text-gray-300 text-xs md:text-sm leading-relaxed"
-                                            >
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
-                    </motion.div>
-                )}
             </div>
 
             {/* Background Video */}
@@ -170,7 +171,7 @@ const Encryption = () => {
                     autoPlay
                     playsInline
                     preload="false"
-                    className="w-full h-auto max-w-[1200px] scale-125"
+                    className="w-full h-auto max-w-[1200px] md:scale-125 scale-150"
                     src="/encryption.webm/"
                 />
             </div>
