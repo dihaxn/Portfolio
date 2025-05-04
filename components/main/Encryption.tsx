@@ -73,93 +73,93 @@ const Encryption = () => {
                 </motion.div>
             </div>
 
-
-            {/* Centered Lock Section */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[20] w-auto h-auto">
-                <div
-                    className="flex flex-col items-center group cursor-pointer w-auto h-auto"
-                    onClick={toggleMenu}
-                    role="button"
-                    tabIndex={0}
-                >
-                    <Image
-                        src="/LockTop.png"
-                        alt="Lock top"
-                        width={60}
-                        height={60}
-                        className="w-[50px] md:w-[60px] translate-y-4 transition-all duration-200 group-hover:translate-y-8"
-                    />
-                    <Image
-                        src="/LockMain.png"
-                        alt="Lock Main"
-                        width={90}
-                        height={90}
-                        className="w-[80px] md:w-[90px] z-10"
-                    />
-                </div>
-
-                {/* Dropdown Panels */}
+            {/* Central Container */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[20] w-auto h-auto flex items-center">
+                {/* Left Panel */}
                 {isMenuOpen && (
-                    <>
-                        {/* Left Panel */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            className="absolute top-full md:top-1/2 left-0 md:-left-[400px] mt-4 md:mt-0 w-[280px] md:w-[350px] bg-gray-800 rounded-lg shadow-xl z-50 p-4 md:-translate-y-1/2"
-                        >
-                            <div className="space-y-6">
-                                {leftSections.map((section, index) => (
-                                    <div key={index}>
-                                        <h3 className="text-cyan-400 font-semibold mb-3 text-sm md:text-base border-b border-cyan-500/30 pb-2">
-                                            {section.title}
-                                        </h3>
-                                        <ul className="list-disc list-inside space-y-2">
-                                            {section.items.map((item, idx) => (
-                                                <li
-                                                    key={idx}
-                                                    className="text-gray-300 text-xs md:text-sm leading-relaxed"
-                                                >
-                                                    {item}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))}
-                            </div>
-                        </motion.div>
-
-                        {/* Right Panel */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            className="absolute top-full md:top-1/2 right-0 md:-right-[400px] mt-4 md:mt-0 w-[280px] md:w-[350px] bg-gray-800 rounded-lg shadow-xl z-50 p-4 md:-translate-y-1/2"
-                        >
-                            <div className="space-y-6">
-                                {rightSections.map((section, index) => (
-                                    <div key={index}>
-                                        <h3 className="text-purple-400 font-semibold mb-3 text-sm md:text-base border-b border-purple-500/30 pb-2">
-                                            {section.title}
-                                        </h3>
-                                        <ul className="list-disc list-inside space-y-2">
-                                            {section.items.map((item, idx) => (
-                                                <li
-                                                    key={idx}
-                                                    className="text-gray-300 text-xs md:text-sm leading-relaxed"
-                                                >
-                                                    {item}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))}
-                            </div>
-                        </motion.div>
-                    </>
+                    <motion.div
+                        initial={{ opacity: 0, x: -100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        className="absolute right-[120px] w-[280px] md:w-[350px] bg-gray-800 rounded-lg shadow-xl z-50 p-4"
+                    >
+                        <div className="space-y-6">
+                            {leftSections.map((section, index) => (
+                                <div key={index}>
+                                    <h3 className="text-cyan-400 font-semibold mb-3 text-sm md:text-base border-b border-cyan-500/30 pb-2">
+                                        {section.title}
+                                    </h3>
+                                    <ul className="list-disc list-inside space-y-2">
+                                        {section.items.map((item, idx) => (
+                                            <li
+                                                key={idx}
+                                                className="text-gray-300 text-xs md:text-sm leading-relaxed"
+                                            >
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
                 )}
 
-                <div className="Welcome-box px-[15px] py-[4px] z-[20] border my-[20px] border-[#7042f88b] opacity-[0.9]">
-                    <h1 className="Welcome-text text-[12px]">Explore Profile</h1>
+                {/* Lock Section */}
+                <div className="relative z-30">
+                    <div
+                        className="flex flex-col items-center group cursor-pointer w-auto h-auto"
+                        onClick={toggleMenu}
+                        role="button"
+                        tabIndex={0}
+                    >
+                        <Image
+                            src="/LockTop.png"
+                            alt="Lock top"
+                            width={60}
+                            height={60}
+                            className="w-[50px] md:w-[60px] translate-y-4 transition-all duration-200 group-hover:translate-y-8"
+                        />
+                        <Image
+                            src="/LockMain.png"
+                            alt="Lock Main"
+                            width={90}
+                            height={90}
+                            className="w-[80px] md:w-[90px] z-10"
+                        />
+                    </div>
+                    <div className="Welcome-box px-[15px] py-[4px] z-[20] border my-[20px] border-[#7042f88b] opacity-[0.9]">
+                        <h1 className="Welcome-text text-[12px]">Explore Profile</h1>
+                    </div>
                 </div>
+
+                {/* Right Panel */}
+                {isMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        className="absolute left-[120px] w-[280px] md:w-[350px] bg-gray-800 rounded-lg shadow-xl z-50 p-4"
+                    >
+                        <div className="space-y-6">
+                            {rightSections.map((section, index) => (
+                                <div key={index}>
+                                    <h3 className="text-purple-400 font-semibold mb-3 text-sm md:text-base border-b border-purple-500/30 pb-2">
+                                        {section.title}
+                                    </h3>
+                                    <ul className="list-disc list-inside space-y-2">
+                                        {section.items.map((item, idx) => (
+                                            <li
+                                                key={idx}
+                                                className="text-gray-300 text-xs md:text-sm leading-relaxed"
+                                            >
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
             </div>
 
             {/* Background Video */}
