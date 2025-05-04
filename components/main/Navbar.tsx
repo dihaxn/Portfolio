@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Socials } from "@/constants";
 import Image from "next/image";
 import { Orbitron, Rajdhani } from 'next/font/google';
 
@@ -70,7 +69,7 @@ const Navbar = () => {
 
               <a
                   href="#contact"
-                  className="px-5 py-2 bg-gradient-to-r from-[#2A0E61] to-[#6F3BD8] text-white font-semibold rounded-full hover:from-[#6F3BD8] hover:to-[#2A0E61] hover:shadow-lg hover:shadow-[#6F3BD8]/40 transition-all duration-300 transform hover:scale-105 font-rajdhani"
+                  className="px-5 py-2 bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white font-semibold rounded-full hover:from-[#06B6D4] hover:to-[#8B5CF6] hover:shadow-cyan-violet transition-all duration-300 transform hover:scale-105 font-rajdhani shadow-cyan-violet"
               >
                 Contact me
               </a>
@@ -125,7 +124,7 @@ const Navbar = () => {
                   <a
                       href="#contact"
                       onClick={() => setIsMenuOpen(false)}
-                      className="px-5 py-2 bg-gradient-to-r from-[#2A0E61] to-[#6F3BD8] text-white font-semibold rounded-full hover:from-[#6F3BD8] hover:to-[#2A0E61] transition-all duration-300 font-rajdhani"
+                      className="px-5 py-2 bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white font-semibold rounded-full hover:from-[#06B6D4] hover:to-[#8B5CF6] hover:shadow-cyan-violet transition-all duration-300 font-rajdhani shadow-cyan-violet"
                   >
                     Contact me
                   </a>
