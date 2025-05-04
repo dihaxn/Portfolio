@@ -1,8 +1,8 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
-import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion';
-import { SparklesIcon } from '@heroicons/react/24/solid';
+import React from "react";
+import { motion } from "framer-motion";
+import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
+import { SparklesIcon } from "@heroicons/react/24/solid";
 
 const SkillText = () => {
     return (
@@ -19,7 +19,7 @@ const SkillText = () => {
             <br/>
             <motion.h1
                 variants={slideInFromLeft(0.5)}
-                className='text-4xl md:text-5xl lg:text-6xl font-extrabold mt-2 md:mt-[10px] text-center mb-3 md:mb-[15px] tech-arsenal-gradient tech-arsenal-heading'
+                className='text-4xl md:text-5xl lg:text-6xl font-extrabold mt-2 md:mt-[10px] text-center mb-3 md:mb-[15px] tech-arsenal-gradient tech-arsenal-heading neon-skill-glow'
             >
                 ⚡ Tech Arsenal
             </motion.h1>

@@ -19,7 +19,6 @@ const HeroContent: React.FC = () => {
       >
         {/* Left Column */}
         <div className="h-full w-full flex flex-col gap-3 md:gap-5 justify-center m-auto text-center md:text-start">
-          {/* Badge */}
           <motion.div
               variants={slideInFromTop}
               className="Welcome-box py-[6px] md:py-[8px] px-[6px] md:px-[7px] border border-[#7042f88b] opacity-[0.9] inline-flex items-center"
@@ -31,92 +30,54 @@ const HeroContent: React.FC = () => {
             </h1>
           </motion.div>
 
-          {/* Title */}
           <motion.div
               variants={slideInFromLeft(0.5)}
-              className="
-            flex flex-col
-            gap-3 md:gap-6
-            mt-4 md:mt-6
-            text-2xl md:text-6xl
-            max-w-[600px] w-auto h-auto
-          "
+              className="flex flex-col gap-3 md:gap-6 mt-4 md:mt-6 text-2xl md:text-6xl max-w-[600px] w-auto h-auto"
           >
-            {/* Mobile Title */}
             <div className="md:hidden relative">
               <div className="absolute -inset-4 bg-black/90 blur-2xl rounded-3xl" />
               <motion.span
-                  initial="hidden"
-                  animate="visible"
                   className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 px-4 py-2"
               >
                 Providing project experience
               </motion.span>
             </div>
 
-            {/* Desktop Title */}
-            <div className="hidden md:block bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 [text-shadow:none]">
+            <div className="hidden md:block bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-600 to-pink-500 neon-hero-glow [text-shadow:none]">
               Providing
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-teal-300">
-              {' '}
-                the best{' '}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-teal-400 neon-cyan-glow">
+              {' '}the best{' '}
             </span>
               project experience
             </div>
           </motion.div>
 
-          {/* Subtitle */}
           <motion.div
               variants={slideInFromLeft(0.8)}
               className="my-2 md:my-5 max-w-[600px]"
           >
-            {/* Mobile Subtitle */}
             <div className="md:hidden relative">
               <div className="absolute -inset-4 bg-black/90 blur-2xl rounded-3xl" />
-              <motion.span
-                  initial="hidden"
-                  animate="visible"
-                  className="relative z-10 text-sm text-white px-4 py-2 block"
-              >
-                I&apos;m a Full Stack Software Developer with experience in web
+              <motion.span className="relative z-10 text-sm text-white px-4 py-2 block">
+                I'm a Full Stack Software Developer with experience in web
                 and software development. Check out my projects and skills.
               </motion.span>
             </div>
 
-            {/* Desktop Subtitle */}
             <div className="hidden md:block">
-              <motion.p
-                  initial="hidden"
-                  animate="visible"
-                  className="
-                text-lg
-                bg-clip-text text-transparent
-                bg-gradient-to-r from-gray-400 to-gray-600
-                [text-shadow:none]
-              "
-              >
-                I&apos;m a Full Stack Software Developer with experience in web
+              <motion.p className="text-lg bg-clip-text text-transparent bg-gradient-to-r from-gray-400 to-gray-600 [text-shadow:none]">
+                I'm a Full Stack Software Developer with experience in web
                 and software development. Check out my projects and skills.
               </motion.p>
             </div>
           </motion.div>
 
-          {/* Call to Action */}
           <motion.a
               href="https://drive.google.com/file/d/1DqOb72c6E3QywPYqs3ZeeTBC3uLmnp8h/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               variants={slideInFromLeft(1)}
-              className="
-            py-2 md:py-2.5
-            px-4 md:px-5
-            button-primary text-center text-white
-            cursor-pointer rounded-full md:rounded-lg
-            glow-button transform transition-all duration-300 hover:scale-105
-            text-sm md:text-sm
-            relative overflow-hidden
-            w-fit mx-auto md:mx-0
-          "
+              className="py-2 md:py-2.5 px-4 md:px-5 button-primary text-center text-white cursor-pointer rounded-full md:rounded-lg glow-button transform transition-all duration-300 hover:scale-105 text-sm md:text-sm relative overflow-hidden w-fit mx-auto md:mx-0"
           >
           <span className="relative z-10">
             Download CV <span className="inline-block animate-bounce">😎</span>
@@ -125,7 +86,6 @@ const HeroContent: React.FC = () => {
           </motion.a>
         </div>
 
-        {/* Right Column: Hero Image */}
         <motion.div
             variants={slideInFromRight(0.8)}
             className="w-full h-full flex justify-center items-center mt-8 md:mt-0"
