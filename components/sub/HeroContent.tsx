@@ -47,9 +47,9 @@ const HeroContent = () => {
 
           <motion.p
               variants={slideInFromLeft(0.8)}
-              className="text-base md:text-lg text-cyan-300 my-3 md:my-5 max-w-[600px]
+              className="text-base md:text-lg text-[#c0c0c0] my-3 md:my-5 max-w-[600px]
     [text-shadow:_0_0_3px_#00f7ff] md:[text-shadow:none]
-    [-webkit-text-stroke:0.1px_#00f7ff] md:[-webkit-text-stroke:0]"
+    [-webkit-text-stroke:0.1px_#ffd700] md:[-webkit-text-stroke:0]"
           >
             I&apos;m a Full Stack Software Developer with experience in Website
             and Software development. Check out my projects and skills.
