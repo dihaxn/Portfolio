@@ -59,14 +59,14 @@ const HeroContent: React.FC = () => {
             <div className="md:hidden relative">
               <div className="absolute -inset-4 bg-black/90 blur-2xl rounded-3xl" />
               <motion.span className="relative z-10 text-sm text-white px-4 py-2 block">
-                I'm a Full Stack Software Developer with experience in web
+                I&apos;m a Full Stack Software Developer with experience in web
                 and software development. Check out my projects and skills.
               </motion.span>
             </div>
 
             <div className="hidden md:block">
               <motion.p className="text-lg bg-clip-text text-transparent bg-gradient-to-r from-gray-400 to-gray-600 [text-shadow:none]">
-                I'm a Full Stack Software Developer with experience in web
+                I&apos;m a Full Stack Software Developer with experience in web
                 and software development. Check out my projects and skills.
               </motion.p>
             </div>
