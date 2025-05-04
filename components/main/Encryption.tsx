@@ -245,14 +245,14 @@ const Encryption = () => {
             </div>
 
             {/* Background Video */}
-            <div className="w-full h-full flex items-center justify-center absolute">
+            <div className="w-full h-full flex items-center justify-center absolute inset-0">
                 <video
                     loop
                     muted
                     autoPlay
                     playsInline
                     preload="false"
-                    className="w-full h-auto max-w-[1200px] md:scale-125 scale-[1.8] sm:scale-150 opacity-50"
+                    className="w-full h-full object-cover opacity-50"
                     src="/encryption.webm/"
                 />
             </div>
