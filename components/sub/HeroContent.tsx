@@ -17,8 +17,9 @@ const HeroContent: React.FC = () => {
           animate="visible"
           className="flex flex-col md:flex-row items-center justify-center px-4 md:px-20 mt-20 md:mt-40 w-full z-[20]"
       >
-        {/* Left Column */}
+        {/* Text Content */}
         <div className="h-full w-full flex flex-col gap-3 md:gap-5 justify-center m-auto text-center md:text-start">
+          {/* Animated Badge */}
           <motion.div
               variants={slideInFromTop}
               className="Welcome-box py-[6px] md:py-[8px] px-[6px] md:px-[7px] border border-[#7042f88b] opacity-[0.9] inline-flex items-center"
@@ -30,20 +31,25 @@ const HeroContent: React.FC = () => {
             </h1>
           </motion.div>
 
+          {/* Main Heading */}
           <motion.div
               variants={slideInFromLeft(0.5)}
               className="flex flex-col gap-3 md:gap-6 mt-4 md:mt-6 text-2xl md:text-6xl max-w-[600px] w-auto h-auto"
           >
+            {/* Mobile Heading */}
             <div className="md:hidden relative">
               <div className="absolute -inset-4 bg-black/90 blur-2xl rounded-3xl" />
-              <motion.span
-                  className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 px-4 py-2"
-              >
-                Providing project experience
+              <motion.span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-600 to-pink-500 neon-hero-glow px-4 py-2">
+                Providing
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-teal-400 neon-cyan-glow">
+                {' '}the best{' '}
+              </span>
+                project experience
               </motion.span>
             </div>
 
-            <div className="hidden md:block bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-600 to-pink-500 neon-hero-glow [text-shadow:none]">
+            {/* Desktop Heading */}
+            <div className="hidden md:block bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-600 to-pink-500 neon-hero-glow">
               Providing
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-teal-400 neon-cyan-glow">
               {' '}the best{' '}
@@ -52,26 +58,21 @@ const HeroContent: React.FC = () => {
             </div>
           </motion.div>
 
+          {/* Description Text */}
           <motion.div
               variants={slideInFromLeft(0.8)}
               className="my-2 md:my-5 max-w-[600px]"
           >
-            <div className="md:hidden relative">
-              <div className="absolute -inset-4 bg-black/90 blur-2xl rounded-3xl" />
-              <motion.span className="relative z-10 text-sm text-white px-4 py-2 block">
-                I&apos;m a Full Stack Software Developer with experience in web
-                and software development. Check out my projects and skills.
-              </motion.span>
-            </div>
-
-            <div className="hidden md:block">
-              <motion.p className="text-lg bg-clip-text text-transparent bg-gradient-to-r from-gray-400 to-gray-600 [text-shadow:none]">
+            <div className="relative">
+              <div className="md:hidden absolute -inset-4 bg-black/90 blur-2xl rounded-3xl" />
+              <motion.p className="relative z-10 text-sm md:text-lg bg-clip-text text-transparent bg-gradient-to-r from-gray-400 to-gray-600 [text-shadow:none] px-4 py-2 md:px-0 md:py-0">
                 I&apos;m a Full Stack Software Developer with experience in web
                 and software development. Check out my projects and skills.
               </motion.p>
             </div>
           </motion.div>
 
+          {/* Download Button */}
           <motion.a
               href="https://drive.google.com/file/d/1DqOb72c6E3QywPYqs3ZeeTBC3uLmnp8h/view?usp=drive_link"
               target="_blank"
@@ -86,6 +87,7 @@ const HeroContent: React.FC = () => {
           </motion.a>
         </div>
 
+        {/* Image Section */}
         <motion.div
             variants={slideInFromRight(0.8)}
             className="w-full h-full flex justify-center items-center mt-8 md:mt-0"
@@ -96,6 +98,7 @@ const HeroContent: React.FC = () => {
               height={650}
               width={650}
               className="w-[300px] h-[300px] md:w-[650px] md:h-[650px]"
+              priority
           />
         </motion.div>
       </motion.div>
