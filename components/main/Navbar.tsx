@@ -28,10 +28,10 @@ const Navbar = () => {
                 alt="logo"
                 width={70}
                 height={70}
-                className="cursor-pointer w-[30px] md:w-[50px] hover:animate-slowspin transition-transform duration-300 hover:scale-110"
+                className="cursor-pointer hidden sm:block w-[30px] md:w-[50px] hover:animate-slowspin transition-transform duration-300 hover:scale-110"
             />
 
-            <h3 className="hidden sm:block text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent ml-2 transition-all duration-300 group-hover:from-cyan-400 group-hover:to-purple-400 font-orbitron">
+            <h3 className="block text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent ml-2 transition-all duration-300 group-hover:from-cyan-400 group-hover:to-purple-400 font-orbitron">
               DIHAN LAKNUKA
             </h3>
           </a>
