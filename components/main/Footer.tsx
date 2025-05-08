@@ -79,9 +79,9 @@ const Footer = () => {
                         </h4>
                         <ul className="space-y-1 sm:space-y-2 md:space-y-3">
                             {[
-                                { icon: FaTiktok, color: "text-pink-500", href: socialLinks.tiktok, text: "TikTok" },
-                                { icon: RxGithubLogo, color: "text-gray-300", href: socialLinks.github, text: "GitHub" },
-                                { icon: FaTelegramPlane, color: "text-blue-300", href: socialLinks.telegram, text: "Telegram" },
+                                { icon: FaTiktok, color: "text-pink-500", href: socialLinks.tiktok, text: "TikTok/dihaxn" },
+                                { icon: RxGithubLogo, color: "text-gray-300", href: socialLinks.github, text: "GitHub/dihaxn" },
+                                { icon: FaTelegramPlane, color: "text-blue-300", href: socialLinks.telegram, text: "Telegram/dihaxn" },
                             ].map((item, index) => (
                                 <li key={index} className="group relative">
                                     <a
@@ -107,9 +107,9 @@ const Footer = () => {
                         </h4>
                         <ul className="space-y-1 sm:space-y-2 md:space-y-3">
                             {[
-                                { icon: RxInstagramLogo, color: "text-pink-400", href: socialLinks.instagram, text: "Instagram" },
-                                { icon: RxTwitterLogo, color: "text-blue-300", href: socialLinks.twitter, text: "Twitter" },
-                                { icon: RxLinkedinLogo, color: "text-blue-500", href: socialLinks.linkedin, text: "LinkedIn" },
+                                { icon: RxInstagramLogo, color: "text-pink-400", href: socialLinks.instagram, text: "Instagram/diha.xn" },
+                                { icon: RxTwitterLogo, color: "text-blue-300", href: socialLinks.twitter, text: "Twitter/dihaxn" },
+                                { icon: RxLinkedinLogo, color: "text-blue-500", href: socialLinks.linkedin, text: "LinkedIn/Dihan Laknuka" },
                             ].map((item, index) => (
                                 <li key={index} className="group relative">
                                     <a
