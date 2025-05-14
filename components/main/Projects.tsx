@@ -14,7 +14,7 @@ const Projects = () => {
                     <ProjectCard
                         src="/NextWebsite.png"
                         title="Little Lanka Outlet Management System – Backend User Service"
-                        description="Robust Spring Boot microservice powering user and outlet operations, featuring JWT‑based authentication, Swagger API docs, and seamless MySQL integration for secure, real‑time inventory & sales tracking."
+                        description="Backend service built with Spring Boot 🔧, using JWT for secure login 🔐, Swagger for easy API docs 📚, and MySQL for real-time inventory & sales tracking 📊."
                         technologies={[
                             "Spring Boot",
                             "Spring Security (JWT)",
