@@ -13,10 +13,19 @@ const Projects = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
                     <ProjectCard
                         src="/NextWebsite.png"
-                        title="Little Lanka Outlet Management System"
-                        description="Comprehensive POS solution with real-time analytics and inventory management."
-                        technologies={["React TS", "Spring Boot", "AWS", "Docker"]}
+                        title="Little Lanka Outlet Management System – Backend User Service"
+                        description="Robust Spring Boot microservice powering user and outlet operations, featuring JWT‑based authentication, Swagger API docs, and seamless MySQL integration for secure, real‑time inventory & sales tracking."
+                        technologies={[
+                            "Spring Boot",
+                            "Spring Security (JWT)",
+                            "Swagger / OpenAPI",
+                            "Spring Data JPA",
+                            "MySQL",
+                            "Maven",
+                            "Docker"
+                        ]}
                     />
+
                     <ProjectCard
                         src="/NextWebsite.png"
                         title="Little Lanka Web site"
