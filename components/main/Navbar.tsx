@@ -62,7 +62,7 @@ const Navbar = () => {
                   className="cursor-pointer relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-gradient-to-r before:from-purple-400 before:to-cyan-400 before:transition-all before:duration-300 hover:before:w-full"
               >
               <span className="hover:bg-gradient-to-r hover:from-purple-400 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent transition-all duration-300 text-base tracking-wider">
-              Achievements
+              ACHIEVEMENTS
               </span>
               </a>
 
@@ -127,7 +127,7 @@ const Navbar = () => {
                       onClick={() => setIsMenuOpen(false)}
                       className="text-gray-200 hover:text-white transition-colors duration-300 text-base font-orbitron py-2"
                   >
-                    Achievements
+                    ACHIEVEMENTS
                   </a>
                   <a
                       href="#projects"
