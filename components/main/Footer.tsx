@@ -18,7 +18,9 @@ const Footer = () => {
         telegram: "https://t.me/dihaxn",
         instagram: "https://www.instagram.com/dihax.n?igsh=YmZiNTZ6NTdsYWc5",
         twitter: "https://x.com/dihaxn",
-        linkedin: "https://www.linkedin.com/in/dihan-laknuka125374269"
+        linkedin: "https://www.linkedin.com/in/dihan-laknuka125374269",
+        email: "mailto:ihanlaknuka@gmail.com",
+        phone: "tel:+94701410595"
     };
 
     return (
@@ -47,6 +49,31 @@ const Footer = () => {
             .animate-line-expand {
               animation: line-expand 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
             }
+            .cosmic-link {
+              position: relative;
+              overflow: hidden;
+            }
+            .cosmic-link::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.3), transparent);
+              transition: 0.5s;
+            }
+            .cosmic-link:hover::before {
+              left: 100%;
+            }
+            .star-pulse {
+              animation: starPulse 4s infinite;
+            }
+            @keyframes starPulse {
+              0% { opacity: 0.2; transform: scale(1); }
+              50% { opacity: 1; transform: scale(1.05); }
+              100% { opacity: 0.2; transform: scale(1); }
+            }
           `
                 }}
             />
@@ -54,7 +81,24 @@ const Footer = () => {
             {/* Animated top border */}
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-border-width" />
 
-            <div className="max-w-6xl mx-auto">
+            {/* Cosmic Stars */}
+            <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+                {[...Array(20)].map((_, i) => (
+                    <div
+                        key={i}
+                        className="absolute rounded-full bg-white"
+                        style={{
+                            top: `${Math.random() * 100}%`,
+                            left: `${Math.random() * 100}%`,
+                            width: `${Math.random() * 3 + 1}px`,
+                            height: `${Math.random() * 3 + 1}px`,
+                            animationDelay: `${Math.random() * 4}s`
+                        }}
+                    />
+                ))}
+            </div>
+
+            <div className="max-w-6xl mx-auto relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 relative">
                     {/* Profile Section */}
                     <div className="space-y-2 sm:space-y-4 relative p-4 sm:p-6 rounded-xl border border-transparent bg-gradient-to-br from-purple-900/30 to-cyan-900/20 bg-origin-border">
@@ -88,11 +132,10 @@ const Footer = () => {
                                         href={item.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5"
+                                        className="cosmic-link flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5"
                                     >
-                                        <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110`} />
+                                        <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110 star-pulse`} />
                                         <span className="text-xs sm:text-sm md:text-base text-white/90">{item.text}</span>
-                                        <span className="absolute inset-0 z-10 pointer-events-none" aria-hidden="true" />
                                     </a>
                                 </li>
                             ))}
@@ -116,11 +159,10 @@ const Footer = () => {
                                         href={item.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5"
+                                        className="cosmic-link flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5"
                                     >
-                                        <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110`} />
+                                        <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110 star-pulse`} />
                                         <span className="text-xs sm:text-sm md:text-base text-white/90">{item.text}</span>
-                                        <span className="absolute inset-0 z-10 pointer-events-none" aria-hidden="true" />
                                     </a>
                                 </li>
                             ))}
@@ -138,31 +180,30 @@ const Footer = () => {
                                 {
                                     icon: RxEnvelopeClosed,
                                     color: "text-purple-400",
-                                    href: "mailto:ihanlaknuka@gmail.com",
+                                    href: socialLinks.email,
                                     text: "ihanlaknuka@gmail.com"
                                 },
                                 {
                                     icon: RxMobile,
                                     color: "text-green-400",
-                                    isLink: false,
+                                    href: socialLinks.phone,
                                     text: "+94 701410595"
                                 },
                                 {
                                     icon: RxGlobe,
                                     color: "text-yellow-400",
                                     text: "Kiribathgoda",
-                                    isLink: false
+                                    isStatic: true
                                 },
                             ].map((item, index) => (
                                 <li key={index} className="group relative">
-                                    {item.isLink !== false ? (
+                                    {!item.isStatic ? (
                                         <a
                                             href={item.href}
-                                            className="flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5"
+                                            className="cosmic-link flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5"
                                         >
-                                            <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110`} />
+                                            <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110 star-pulse`} />
                                             <span className="text-xs sm:text-sm md:text-base text-white/90 break-all">{item.text}</span>
-                                            <span className="absolute inset-0 z-10 pointer-events-none" aria-hidden="true" />
                                         </a>
                                     ) : (
                                         <div className="flex items-center p-1 sm:p-2 group">
