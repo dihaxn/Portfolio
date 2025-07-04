@@ -1,22 +1,18 @@
 import React from "react";
 import {
     RxGithubLogo,
-    RxInstagramLogo,
     RxTwitterLogo,
     RxLinkedinLogo,
     RxEnvelopeClosed,
     RxMobile,
     RxGlobe
 } from "react-icons/rx";
-import { FaTiktok } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 
 const Footer = () => {
     const socialLinks = {
-        tiktok: "https://www.tiktok.com/@dihaxn",
         github: "https://github.com/dihaxn",
         telegram: "https://t.me/dihaxn",
-        instagram: "https://www.instagram.com/dihax.n?igsh=YmZiNTZ6NTdsYWc5",
         twitter: "https://x.com/dihaxn",
         linkedin: "https://www.linkedin.com/in/dihan-laknuka125374269",
         email: "mailto:ihanlaknuka@gmail.com",
@@ -123,7 +119,6 @@ const Footer = () => {
                         </h4>
                         <ul className="space-y-1 sm:space-y-2 md:space-y-3">
                             {[
-                                { icon: FaTiktok, color: "text-pink-500", href: socialLinks.tiktok, text: "TikTok/dihaxn" },
                                 { icon: RxGithubLogo, color: "text-gray-300", href: socialLinks.github, text: "GitHub/dihaxn" },
                                 { icon: FaTelegramPlane, color: "text-blue-300", href: socialLinks.telegram, text: "Telegram/dihaxn" },
                             ].map((item, index) => (
@@ -134,7 +129,9 @@ const Footer = () => {
                                         rel="noopener noreferrer"
                                         className="cosmic-link flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5"
                                     >
-                                        <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110 star-pulse`} />
+                                        {React.createElement(item.icon, {
+                                            className: `mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110 star-pulse`,
+                                        })}
                                         <span className="text-xs sm:text-sm md:text-base text-white/90">{item.text}</span>
                                     </a>
                                 </li>
@@ -150,7 +147,6 @@ const Footer = () => {
                         </h4>
                         <ul className="space-y-1 sm:space-y-2 md:space-y-3">
                             {[
-                                { icon: RxInstagramLogo, color: "text-pink-400", href: socialLinks.instagram, text: "Instagram/diha.xn" },
                                 { icon: RxTwitterLogo, color: "text-blue-300", href: socialLinks.twitter, text: "Twitter/dihaxn" },
                                 { icon: RxLinkedinLogo, color: "text-blue-500", href: socialLinks.linkedin, text: "LinkedIn/Dihan Laknuka" },
                             ].map((item, index) => (
@@ -161,7 +157,9 @@ const Footer = () => {
                                         rel="noopener noreferrer"
                                         className="cosmic-link flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5"
                                     >
-                                        <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110 star-pulse`} />
+                                        {React.createElement(item.icon, {
+                                            className: `mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110 star-pulse`,
+                                        })}
                                         <span className="text-xs sm:text-sm md:text-base text-white/90">{item.text}</span>
                                     </a>
                                 </li>
@@ -202,12 +200,16 @@ const Footer = () => {
                                             href={item.href}
                                             className="cosmic-link flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5"
                                         >
-                                            <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110 star-pulse`} />
+                                            {React.createElement(item.icon, {
+                                                className: `mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110 star-pulse`,
+                                            })}
                                             <span className="text-xs sm:text-sm md:text-base text-white/90 break-all">{item.text}</span>
                                         </a>
                                     ) : (
                                         <div className="flex items-center p-1 sm:p-2 group">
-                                            <item.icon className={`mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110`} />
+                                            {React.createElement(item.icon, {
+                                                className: `mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110`,
+                                            })}
                                             <span className="text-xs sm:text-sm md:text-base text-white/90">{item.text}</span>
                                         </div>
                                     )}
@@ -230,8 +232,8 @@ const Footer = () => {
             </div>
 
             {/* Background glow effects */}
-            <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-purple-500/20 rounded-full blur-[80px] -z-10" />
-            <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-[80px] -z-10" />
+            <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-purple-500/20 rounded-full blur-[80px] -z-10 pointer-events-none" />
+            <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-[80px] -z-10 pointer-events-none" />
         </footer>
     );
 };
