@@ -14,7 +14,7 @@ const Footer = () => {
         github: "https://github.com/dihaxn",
         telegram: "https://t.me/dihaxn",
         twitter: "https://x.com/dihaxn",
-        linkedin: "https://www.linkedin.com/in/dihan-laknuka125374269",
+        linkedin: "https://www.linkedin.com/in/dihanlaknuka/",
         email: "mailto:ihanlaknuka@gmail.com",
         phone: "tel:+94701410595"
     };
