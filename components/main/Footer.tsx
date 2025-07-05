@@ -48,6 +48,7 @@ const Footer = () => {
             .cosmic-link {
               position: relative;
               overflow: hidden;
+              z-index: 10;
             }
             .cosmic-link::before {
               content: '';
@@ -58,6 +59,7 @@ const Footer = () => {
               height: 100%;
               background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.3), transparent);
               transition: 0.5s;
+              z-index: -1;
             }
             .cosmic-link:hover::before {
               left: 100%;
@@ -70,31 +72,44 @@ const Footer = () => {
               50% { opacity: 1; transform: scale(1.05); }
               100% { opacity: 0.2; transform: scale(1); }
             }
+            .footer-content {
+              position: relative;
+              z-index: 20;
+            }
+            .cosmic-stars {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              pointer-events: none;
+              z-index: 1;
+            }
           `
                 }}
             />
 
             {/* Animated top border */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-border-width" />
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-border-width z-30" />
 
             {/* Cosmic Stars */}
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-                {[...Array(20)].map((_, i) => (
+            <div className="cosmic-stars">
+                {[...Array(15)].map((_, i) => (
                     <div
                         key={i}
-                        className="absolute rounded-full bg-white"
+                        className="absolute rounded-full bg-white/30 pointer-events-none"
                         style={{
                             top: `${Math.random() * 100}%`,
                             left: `${Math.random() * 100}%`,
-                            width: `${Math.random() * 3 + 1}px`,
-                            height: `${Math.random() * 3 + 1}px`,
+                            width: `${Math.random() * 2 + 1}px`,
+                            height: `${Math.random() * 2 + 1}px`,
                             animationDelay: `${Math.random() * 4}s`
                         }}
                     />
                 ))}
             </div>
 
-            <div className="max-w-6xl mx-auto relative z-10">
+            <div className="max-w-6xl mx-auto footer-content">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 relative">
                     {/* Profile Section */}
                     <div className="space-y-2 sm:space-y-4 relative p-4 sm:p-6 rounded-xl border border-transparent bg-gradient-to-br from-purple-900/30 to-cyan-900/20 bg-origin-border">
@@ -119,15 +134,15 @@ const Footer = () => {
                         </h4>
                         <ul className="space-y-1 sm:space-y-2 md:space-y-3">
                             {[
-                                { icon: RxGithubLogo, color: "text-gray-300", href: socialLinks.github, text: "GitHub/dihaxn" },
-                                { icon: FaTelegramPlane, color: "text-blue-300", href: socialLinks.telegram, text: "Telegram/dihaxn" },
+                                { icon: RxGithubLogo, color: "text-gray-300", href: socialLinks.github, text: "GitHub" },
+                                { icon: FaTelegramPlane, color: "text-blue-300", href: socialLinks.telegram, text: "Telegram" },
                             ].map((item, index) => (
                                 <li key={index} className="group relative">
                                     <a
                                         href={item.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="cosmic-link flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5"
+                                        className="cosmic-link flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5 cursor-pointer"
                                     >
                                         {React.createElement(item.icon, {
                                             className: `mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110 star-pulse`,
@@ -147,15 +162,15 @@ const Footer = () => {
                         </h4>
                         <ul className="space-y-1 sm:space-y-2 md:space-y-3">
                             {[
-                                { icon: RxTwitterLogo, color: "text-blue-300", href: socialLinks.twitter, text: "Twitter/dihaxn" },
-                                { icon: RxLinkedinLogo, color: "text-blue-500", href: socialLinks.linkedin, text: "LinkedIn/Dihan Laknuka" },
+                                { icon: RxTwitterLogo, color: "text-blue-300", href: socialLinks.twitter, text: "Twitter" },
+                                { icon: RxLinkedinLogo, color: "text-blue-500", href: socialLinks.linkedin, text: "LinkedIn" },
                             ].map((item, index) => (
                                 <li key={index} className="group relative">
                                     <a
                                         href={item.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="cosmic-link flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5"
+                                        className="cosmic-link flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5 cursor-pointer"
                                     >
                                         {React.createElement(item.icon, {
                                             className: `mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110 star-pulse`,
@@ -198,7 +213,7 @@ const Footer = () => {
                                     {!item.isStatic ? (
                                         <a
                                             href={item.href}
-                                            className="cosmic-link flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5"
+                                            className="cosmic-link flex items-center w-full p-1 sm:p-2 rounded-lg transition-all duration-300 ease-out hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:-translate-y-0.5 cursor-pointer"
                                         >
                                             {React.createElement(item.icon, {
                                                 className: `mr-2 text-lg sm:text-xl ${item.color} transition-transform duration-300 group-hover:scale-110 star-pulse`,
