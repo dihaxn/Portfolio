@@ -55,7 +55,7 @@ Deploy your portfolio instantly with [Vercel](https://vercel.com/new?utm_medium=
 
 ## 🌟 Show your support
 
-If you like this project, give it a ⭐️ on [GitHub](https://github.com/dihaxn/Portfolio)!
+If you like this project, give it a ⭐️ on [GitHub](https://github.com/sponsors/dihaxn)!
 
 ---
 
