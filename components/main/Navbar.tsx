@@ -32,7 +32,7 @@ const Navbar = () => {
             />
 
             <h3 className="block text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent ml-2 transition-all duration-300 group-hover:from-cyan-400 group-hover:to-purple-400 font-orbitron">
-              DIHAN LAKNUKA
+              Portfolio
             </h3>
           </a>
 
